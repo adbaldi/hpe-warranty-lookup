@@ -9,7 +9,7 @@ def get_warranty_HTML(serial):
     params = urllib.parse.urlencode({'rows[0].item.serialNumber': serial})
     headers = {"Content-type": "application/x-www-form-urlencoded"}
 
-    conn = http.client.HTTPConnection("h20564.www2.hpe.com")
+    conn = http.client.HTTPConnection("support.hpe.com")
     conn.request("POST", "/hpsc/wc/public/find", params, headers)
     response = conn.getresponse()
     
